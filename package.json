@@ -1,0 +1,24 @@
+{
+  "name": "trades-job-board",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CMBCoding/Trades-Job-Board.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/CMBCoding/Trades-Job-Board/issues"
+  },
+  "homepage": "https://github.com/CMBCoding/Trades-Job-Board#readme",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
