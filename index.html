@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Jobs - Green River College</title>
+</head>
+<body>
+    <main>
+        <form action="#" id="job-post-form">
+                
+                <fieldset>
+                    <legend>Position Information</legend>
+                    <!-- Job title input -->
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" name="job-title" id="job-title" placeholder="Position title"></input>
+                    <!-- Company name input -->
+                    <label for="company-name">Company Name:</label>
+                    <input type="text" name="company-name" id="company-name" placeholder="Company name"></input>
+                
+                    <!-- Trade Area input -->
+                    <label for="trade-area">Trade Area:</label>
+                    <select name="trade-area" id="trade-area">
+                        <option value="none">-- Select a Trade --</option>
+                        <option value="auto">Automotive</option>
+                        <option value="carpentry">Carpentry</option>
+                        <option value="manu">Manufacturing</option>
+                        <option value="mega">Megatronics</option>
+                        <option value="weld">Welding</option>
+                    </select>
+                    
+                    <!-- Location input -->
+                    <label for="job-location">Location:</label>
+                    <select name="job-location" id="job-location">
+                        <option value="none">-- Select a Location --</option>
+                        <option value="5mi">Within 5 miles</option>
+                        <option value="15mi">Within 15 miles</option>
+                        <option value="25mi">Within 25 miles</option>
+                        <option value="50mi">Within 50 miles</option>
+                    </select>
+                </fieldset>
+
+                <!-- Full/Part-time inputs -->
+                <fieldset>
+                    <legend>Position Status</legend>
+                    <label for="part-time">Full Time or Part Time</label>
+                    <input type="radio" name="" id="">
+                </fieldset>
+
+                <!-- Post and Expiration date inputs -->
+                <fieldset>
+                    <legend>Position Start/End Dates</legend>
+                    <label for="job-start-date">Start Date:</label>
+                    <input type="date" name="job-start-date" id="job-start-date">
+                    <label for="job-end-date">End Date:</label>
+                    <input type="date" name="job-end-date" id="job-end-date">
+                </fieldset>
+
+                <!-- Job url input -->
+                <fieldset>
+                    <legend>Application URL</legend>
+                    <label for="job-url">URL:</label>
+                    <input type="url" name="job-url" id="job-url">
+                </fieldset>
+
+                <button type="submit">Post</button>
+        </form>
+    </main>
+</body>
+</html>
