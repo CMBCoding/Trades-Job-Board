@@ -3,6 +3,17 @@ document.getElementById("job-post-form").onsubmit = () => {
 
     //Set a validation flag
     isValid = true;
+
+    //Set regex pattern for URL validation
+    //regex tested with 4 different urls using https://regexr.com
+    /* Pattern explaination:
+        https?:\/\/(www\.)? - Matches htttp or https and or www.
+        [-a-zA-Z0-9@:%._\+~#=] - Matches upper and lowercase letters, numbers, and special characters.
+        {1,256} - States that the prior pattern has to be between 1 and 256 characters in length
+        \.[a-zA-Z0-9()]{1,6}\b - Matches a domain (.com, .edu, etc.) between 1 and 6 characters
+        ([-a-zA-Z0-9()@:%_\+.~#?&//=]*) - Matches what follows the domain extension (a-z, 0-9, special characters)
+    */
+    urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
     
     //Get the constituent form elements and assign them to variables
     let jobTitle = document.getElementById("job-title").value.trim();
@@ -41,6 +52,12 @@ document.getElementById("job-post-form").onsubmit = () => {
     if (jobDateStart === "" || jobDateEnd === "") {
         isValid = false; //Invalidate the input
         document.getElementById("error-msg-date").style.display = "block";
+    }
+
+    //Validate the job link URL
+    if (joblink) {
+        isValid = false; //Invalidate the input
+
     }
 
 
