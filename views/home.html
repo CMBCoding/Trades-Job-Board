@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/styles.css">
+    <!-- Scripts -->
+    <script src="/scripts/script.js" defer></script>
     <title>Add Jobs - Green River College</title>
 </head>
 <body>
@@ -16,10 +18,13 @@
                     <!-- Job title input -->
                     <label for="job-title">Job Title:</label>
                     <input type="text" name="job-title" id="job-title" placeholder="Position title"></input>
+                    <span class="error-msg" id="error-msg-title">Please enter a job title.</span>
+
                     <!-- Company name input -->
                     <label for="company-name">Company Name:</label>
                     <input type="text" name="company-name" id="company-name" placeholder="Company name"></input>
-                
+                    <span class="error-msg" id="error-msg-company">Please select a lcompany name.</span>
+
                     <!-- Trade Area input -->
                     <label for="trade-area">Trade Area:</label>
                     <select name="trade-area" id="trade-area">
@@ -30,7 +35,8 @@
                         <option value="mega">Megatronics</option>
                         <option value="weld">Welding</option>
                     </select>
-                    
+                    <span class="error-msg" id="error-msg-trade">Please select a trade category.</span>
+
                     <!-- Location input -->
                     <label for="job-location">Location:</label>
                     <select name="job-location" id="job-location">
@@ -40,6 +46,7 @@
                         <option value="25mi">Within 25 miles</option>
                         <option value="50mi">Within 50 miles</option>
                     </select>
+                    <span class="error-msg" id="error-msg-location">Please select a location filter.</span>
                 </fieldset>
 
                 <!-- Full/Part-time inputs -->
@@ -55,6 +62,7 @@
                         <input type="radio" name="job-type" id="full-time" value="full-time">
                         Full Time
                     </label>
+                    <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
                 </fieldset>
 
                 <!-- Post and Expiration date inputs -->
@@ -64,6 +72,7 @@
                     <input type="date" name="job-start-date" id="job-start-date">
                     <label for="job-end-date">End Date:</label>
                     <input type="date" name="job-end-date" id="job-end-date">
+                    <span class="error-msg" id="error-msg-date">Please enter start and end date for the posting.</span>
                 </fieldset>
 
                 <!-- Job url input -->
@@ -71,6 +80,7 @@
                     <legend>Application URL</legend>
                     <label for="job-url">URL:</label>
                     <input type="url" name="job-url" id="job-url">
+                    <span class="error-msg" id="error-msg-url">Please enter link for the application.</span>
                 </fieldset>
 
                 <button type="submit">Post</button>
