@@ -17,9 +17,16 @@ main {
     margin: .2em auto;
 }
 
-#job-post-form > fieldset {
+#job-post-form > fieldset > .input-group{
     display: flex;
     flex-direction: column;
+    margin: 0.5rem 0.5rem;
+
+}
+
+fieldset {
+    border: 1px solid black;
+    margin: 2rem 0;
 }
 
 .error-msg {
