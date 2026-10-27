@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/CMBCoding/Trades-Job-Board#readme",
   "dependencies": {
-    "express": "^5.3.0"
+    "express": "^5.3.0",
+    "nodemon": "^3.1.14"
   }
 }
