@@ -17,16 +17,19 @@
                     <legend>Position Information</legend>
                     <!-- Job title input -->
                     <label for="job-title">Job Title:</label>
-                    <input type="text" name="job-title" id="job-title" placeholder="Position title"></input>
                     <span class="error-msg" id="error-msg-title">Please enter a job title.</span>
+                    <input type="text" name="job-title" id="job-title" placeholder="Position title"></input>
+                    
 
                     <!-- Company name input -->
                     <label for="company-name">Company Name:</label>
+                    <span class="error-msg" id="error-msg-company">Please select a company name.</span>
                     <input type="text" name="company-name" id="company-name" placeholder="Company name"></input>
-                    <span class="error-msg" id="error-msg-company">Please select a lcompany name.</span>
+                    
 
                     <!-- Trade Area input -->
                     <label for="trade-area">Trade Area:</label>
+                    <span class="error-msg" id="error-msg-trade">Please select a trade category.</span>
                     <select name="trade-area" id="trade-area">
                         <option value="none">-- Select a Trade --</option>
                         <option value="auto">Automotive</option>
@@ -35,10 +38,11 @@
                         <option value="mega">Megatronics</option>
                         <option value="weld">Welding</option>
                     </select>
-                    <span class="error-msg" id="error-msg-trade">Please select a trade category.</span>
+                    
 
                     <!-- Location input -->
                     <label for="job-location">Location:</label>
+                    <span class="error-msg" id="error-msg-location">Please select a location filter.</span>
                     <select name="job-location" id="job-location">
                         <option value="none">-- Select a Location --</option>
                         <option value="5mi">Within 5 miles</option>
@@ -46,7 +50,7 @@
                         <option value="25mi">Within 25 miles</option>
                         <option value="50mi">Within 50 miles</option>
                     </select>
-                    <span class="error-msg" id="error-msg-location">Please select a location filter.</span>
+                    
                 </fieldset>
 
                 <!-- Full/Part-time inputs -->
