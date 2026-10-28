@@ -51,6 +51,23 @@ document.getElementById("job-post-form").onsubmit = () => {
         document.getElementById("error-msg-location").style.display = "block";
     }
 
+    //Validate the full time/partime radio button inputs.
+    let jobStatusSelected = false; //No status is selected if niether button is checked.
+    //Grab the full time/partime radio button inputs.
+    let statusButtons = document.getElementsByName("job-type");
+    //Check the status of each status button, if one is checked, validate
+    for (let i = 0; i < statusButtons.length; i++) {
+        if (statusButtons[i].checked) {
+            jobStatusSelected = true;
+        }
+    }
+
+    //If niether job status button is checked, invalidate the validation
+    if (!jobStatusSelected) {
+        isValid = false; //Invalidate the input
+        document.getElementById("error-msg-status").style.display = "block";
+    }
+
     //Validate the start and end dates of the job
     if (jobDateStart === "" || jobDateEnd === "") {
         isValid = false; //Invalidate the input
