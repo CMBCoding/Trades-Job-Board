@@ -64,16 +64,19 @@
                 <!-- Full/Part-time inputs -->
                 <fieldset>
                     <legend>Position Status</legend>
-                    <label for="part-time">
-                        <input type="radio" name="job-type" id="part-time" value="part-time">
-                        Part Time
-                    </label>
+                    <div class="input-group" id="position-status">
+                        <label for="part-time">
+                            <input type="radio" name="job-type" id="part-time" value="part-time">
+                            Part Time
+                        </label>
 
-                    <label for="full-time">
-                        <input type="radio" name="job-type" id="full-time" value="full-time">
-                        Full Time
-                    </label>
-                    <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
+                        <label for="full-time">
+                            <input type="radio" name="job-type" id="full-time" value="full-time">
+                            Full Time
+                        </label>
+                        <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
+                    </div>
+                    
                 </fieldset>
 
                 <!-- Post and Expiration date inputs -->
@@ -95,9 +98,11 @@
                 <!-- Job url input -->
                 <fieldset>
                     <legend>Application URL</legend>
-                    <label for="job-url">URL:</label>
-                    <input type="url" name="job-url" id="job-url">
-                    <span class="error-msg" id="error-msg-url">Please enter a valid url for the application.</span>
+                    <div class="input-group">
+                        <label for="job-url">URL:</label>
+                        <input type="url" name="job-url" id="job-url">
+                        <span class="error-msg" id="error-msg-url">Please enter a valid url for the application.</span>
+                    </div>
                 </fieldset>
 
                 <button type="submit">Post</button>
