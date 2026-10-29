@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Styles -->
     <link rel="stylesheet" href="/styles/styles.css">
     <!-- Scripts -->
@@ -13,8 +15,8 @@
     <main>
         <form action="/submit-post" method="POST" id="job-post-form">
                 
-                <fieldset>
-                    <legend>Position Information</legend>
+                <fieldset class="form-fieldset" id="position-info">
+                    <legend class="form-legend">Position Information</legend>
                     <!-- Job title input -->
                     <div class="input-group" id="job-title-group">
                         <label for="job-title">Job Title:</label>
@@ -62,8 +64,8 @@
                 </fieldset>
 
                 <!-- Full/Part-time inputs -->
-                <fieldset>
-                    <legend>Position Status</legend>
+                <fieldset class="form-fieldset" id="position-status-field">
+                    <legend class="form-legend">Position Status</legend>
                     <div class="input-group" id="position-status">
                         <label for="part-time">
                             <input type="radio" name="job-type" id="part-time" value="part-time">
@@ -74,14 +76,13 @@
                             <input type="radio" name="job-type" id="full-time" value="full-time">
                             Full Time
                         </label>
-                        <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
                     </div>
-                    
+                    <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
                 </fieldset>
 
                 <!-- Post and Expiration date inputs -->
-                <fieldset>
-                    <legend>Position Start/End Dates</legend>
+                <fieldset class="form-fieldset" id="position-dates-field">
+                    <legend class="form-legend">Position Start/End Dates</legend>
 
                     <div class="input-group">
                         <label for="job-start-date">Start Date:</label>
@@ -96,8 +97,8 @@
                 </fieldset>
 
                 <!-- Job url input -->
-                <fieldset>
-                    <legend>Application URL</legend>
+                <fieldset class="form-fieldset" id="job-url-field">
+                    <legend class="form-legend">Application URL</legend>
                     <div class="input-group">
                         <label for="job-url">URL:</label>
                         <input type="url" name="job-url" id="job-url">
@@ -105,7 +106,7 @@
                     </div>
                 </fieldset>
 
-                <button type="submit">Post</button>
+                <button type="submit" id="form-button">Post</button>
         </form>
     </main>
 </body>
