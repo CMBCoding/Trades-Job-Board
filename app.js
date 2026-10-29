@@ -16,6 +16,7 @@ app.use(express.urlencoded({extended: true}));
 
 //Array to hold and parse the data from the form
 const postings = [];
+//Add arrays for each posting type to sort later
 
 //Define a default route ("/")
 app.get('/', (req, res) => {
