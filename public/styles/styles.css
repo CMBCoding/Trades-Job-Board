@@ -69,7 +69,6 @@ main {
     display: grid;
     justify-content: center;
     font-size: large;
-    border: none;
     color: #ffffff;
     border: 2px solid #ffffff;
     box-shadow: var(--darkcyan) 0px 3px;
