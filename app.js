@@ -25,11 +25,8 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/job', (req, res) => {
-    res.render('job');
-});
 //Define a route for the submission of job posting data
-app.post('/submit-post', (req, res) => {
+app.post('/confirm', (req, res) => {
 
     //Generate a JSON object to store the order data
     console.log(req.body);

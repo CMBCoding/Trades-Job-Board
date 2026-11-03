@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
-    <script src="//code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
-    <script defer>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <!-- <script defer>
         let table = new DataTable('#job-table');
-    </script>
+    </script> -->
 </head>
 <body>
     <table id="job-table">
@@ -29,10 +29,10 @@
             <% postings.forEach(post => { %> 
                 <tr>
                     <td><%= post.job-title %></td>
-                    <td><%= post.company-name %></td>
+                    <td><%= post.company_name %></td>
                     <td><%= post.trade-area %></td>
-                    <td><%= post.job-location %></td>
-                    <td><%= post.job-title %></td>
+                    <td><%= post.job_location %></td>
+                    <td><%= post.job_title %></td>
                     <td><%= post.job-title %></td>
                     <td><%= post.job-title %></td>
                     <td><%= post.job-title %></td>
@@ -41,5 +41,8 @@
             <% }); %>
         </tbody>
     </table>
+    <script>
+        new DataTable('#order-table');
+    </script>
 </body>
 </html>
