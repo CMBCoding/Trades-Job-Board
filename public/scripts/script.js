@@ -19,13 +19,13 @@ document.getElementById("job-post-form").onsubmit = () => {
     const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
     
     //Get the constituent form elements and assign them to variables
-    let jobTitle = document.getElementById("job-title").value.trim();
-    let companyName = document.getElementById("company-name").value.trim();
-    let trade = document.getElementById("trade-area").value;
-    let jobLocation = document.getElementById("job-location").value;
-    let jobDateStart = document.getElementById("job-start-date").value;
-    let jobDateEnd = document.getElementById("job-end-date").value;
-    let jobLink = document.getElementById("job-url").value.trim();
+    let jobTitle = document.getElementById("jobTitle").value.trim();
+    let companyName = document.getElementById("companyName").value.trim();
+    let trade = document.getElementById("tradeArea").value;
+    let jobLocation = document.getElementById("jobLocation").value;
+    let jobDateStart = document.getElementById("jobStartDate").value;
+    let jobDateEnd = document.getElementById("jobEndDate").value;
+    let jobLink = document.getElementById("jobUrl").value.trim();
 
     //Validate the job-title field
     if (jobTitle === "") {
@@ -54,7 +54,7 @@ document.getElementById("job-post-form").onsubmit = () => {
     //Validate the full time/partime radio button inputs.
     let jobStatusSelected = false; //No status is selected if niether button is checked.
     //Grab the full time/partime radio button inputs.
-    let statusButtons = document.getElementsByName("job-type");
+    let statusButtons = document.getElementsByName("jobType");
     //Check the status of each status button, if one is checked, validate
     for (let i = 0; i < statusButtons.length; i++) {
         if (statusButtons[i].checked) {
