@@ -40,7 +40,7 @@ app.post('/submit-post', (req, res) => {
 
     //Display a confirmation page after successful submission of a post
     res.render('confirm', {post});
-})
+});
 
 
 // Start the server on the designated port
