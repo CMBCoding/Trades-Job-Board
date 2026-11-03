@@ -25,8 +25,12 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/job', (req, res) => {
+    res.render('job');
+});
+
 //Define a route for the submission of job posting data
-app.post('/confirm', (req, res) => {
+app.post('/job', (req, res) => {
 
     //Generate a JSON object to store the order data
     console.log(req.body);
@@ -39,7 +43,7 @@ app.post('/confirm', (req, res) => {
     console.log(post);
 
     //Display a confirmation page after successful submission of a post
-    res.render('confirm', {post});
+    res.render('job', {post});
 })
 
 
