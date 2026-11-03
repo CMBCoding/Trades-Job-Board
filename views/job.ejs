@@ -2,7 +2,7 @@
 <html lang="en">
 <%-include('partials/head.ejs') %>
 <body>
-    <table id="job-table">
+    <table id="job-table" class="display">
         <thead>
             <tr>
                 <th>Job Title</th>
@@ -32,7 +32,7 @@
         </tbody>
     </table>
     <script>
-        new DataTable('#order-table');
+        new DataTable('#job-table');
     </script>
 </body>
 </html>
