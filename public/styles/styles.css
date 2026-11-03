@@ -21,7 +21,7 @@
     text-align: center;
 }
 
-#intro > h1 {
+#page-heading {
     margin: 1rem;
     color: var(--darkcyan);
     font-size: 3rem;
@@ -39,7 +39,7 @@
     box-shadow: var(--darkcyan) 4px 4px;
 }
 
-#job-post-form {
+#job-post-form, .box {
     padding: 0.75em;
     margin: .2em auto;
 }
@@ -50,10 +50,13 @@
     margin: 0.5rem 0.5rem;
 }
 
-.form-fieldset {
+.form-fieldset, .box {
     border: 2px solid #ffffff;
     margin: 2rem 0;
     border-radius: 0.75rem;
+}
+
+.form-fieldset {
     box-shadow: var(--darkcyan) 3px 3px;
 }
 
@@ -127,6 +130,11 @@
         padding: 0.5rem 0.25rem;
     }
 
+    #page-heading {
+        margin: 0;
+        font-size: 2.25rem;
+    }
+
     #job-post-form {
         padding: 0.5rem 0.25rem;
         margin: .2em auto;
@@ -149,6 +157,12 @@
         width: 32.125rem;
     }
 
+    #page-heading  {
+        margin: 1rem auto;
+        font-size: 2.4rem;
+    }
+    
+
     .form-legend {
         width: 15.625rem;
     }
@@ -162,6 +176,11 @@
     #main {
         width: 50rem;
         padding: 0.5rem;
+    }
+
+    #page-heading {
+        margin: 1rem;
+        font-size: 4.5rem;
     }
 
     #job-post-form {

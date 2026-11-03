@@ -3,17 +3,19 @@
 <%-include('partials/head.ejs') %>
 <body>
     <main id="main">
-        <h1>Post Successful!</h1>
-        <h2>Job posting summary </h2>
-        <p>Job Title: <%= post.jobTitle %></p>
-        <p>Company: <%= post.companyName %></p>
-        <p>Trade area: <%= post.tradeArea %></p>
-        <p>Job location: <%= post.jobLocation %></p>
-        <p>Job Type: <%= post.jobType %></p>
-        <p>Start date: <%= post.jobStartDate %></p>
-        <p>End date: <%= post.jobEndDate %></p>
-        <p>URL: <%= post.jobUrl %></p>
-        <p>Date and Time: <%= post.timestamp.toLocaleString() %></p>
+        <div class="box">
+            <h1 class="wallpoet" id="page-heading">Post Successful!</h1>
+            <h2>Job posting summary </h2>
+            <p><strong>Job Title:</strong> <%= post.jobTitle %></p>
+            <p><strong>Company:</strong> <%= post.companyName %></p>
+            <p><strong>Trade area:</strong> <%= post.tradeArea %></p>
+            <p><strong>Job location:</strong> <%= post.jobLocation %></p>
+            <p><strong>Job Type:</strong> <%= post.jobType %></p>
+            <p><strong>Start date:</strong> <%= post.jobStartDate %></p>
+            <p><strong>End date:</strong> <%= post.jobEndDate %></p>
+            <p><strong>URL:</strong> <%= post.jobUrl %></p>
+            <p><strong>Date and Time:</strong> <%= post.timestamp.toLocaleString() %></p>
+        </div>
     </main>
 </body>
 </html>
