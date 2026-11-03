@@ -29,6 +29,10 @@ app.get('/confirm', (req, res) => {
     res.render('confirm');
 });
 
+app.get('/job', (req, res) => {
+    res.render('job', {postings});
+})
+
 //Define a route for the submission of job posting data
 app.post('/confirm', (req, res) => {
 
