@@ -2,7 +2,7 @@
 <html lang="en">
 <%-include('partials/head.ejs') %>
 <body>
-    <main>
+    <main id="main">
         <form action="/confirm" method="POST" id="job-post-form">
 
                 <div id="intro" >
@@ -97,7 +97,7 @@
                     <legend class="form-legend">Application URL</legend>
                     <div class="input-group">
                         <label for="jobUrl">URL:</label>
-                        <input type="url" name="jobUrl" id="jobUrl">
+                        <input type="url" name="jobUrl" id="jobUrl" placeholder="https//www.website.com">
                         <span class="error-msg" id="error-msg-url">Please enter a valid url for the application.</span>
                     </div>
                 </fieldset>
