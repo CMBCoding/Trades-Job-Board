@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.datatables.net/2.3.4/css/dataTables.dataTables.min.css">
+    <script src="//code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="//cdn.datatables.net/2.3.4/js/dataTables.min.js"></script>
+    <script defer>
+        let table = new DataTable('#job-table');
+    </script>
+</head>
+<body>
+    <table id="job-table">
+        <thead>
+            <tr>
+                <th>Job Title</th>
+                <th>Company Name</th>
+                <th>Trade Area</th>
+                <th>Location</th>
+                <th>Position Type</th>
+                <th>Date Posted</th>
+                <th>Post Expiration</th>
+                <th>Apply Now</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% postings.forEach(post => { %> 
+                <tr>
+                    <td><%= post.job-title %></td>
+                    <td><%= post.company-name %></td>
+                    <td><%= post.trade-area %></td>
+                    <td><%= post.job-location %></td>
+                    <td><%= post.job-title %></td>
+                    <td><%= post.job-title %></td>
+                    <td><%= post.job-title %></td>
+                    <td><%= post.job-title %></td>
+                </tr>
+
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
