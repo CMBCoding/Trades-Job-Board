@@ -89,6 +89,7 @@ main {
 
 .error-msg {
     display: none;
+    text-shadow: 3px 5px 2px #474747, 2px 2px 1px rgba(255,255,255,0);
     color: red;
     font-weight: 600;
     font-style: italic;
