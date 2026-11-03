@@ -25,9 +25,9 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
-app.get('/job', (req, res) => {
-    res.render('job');
-})
+app.get('/confirm', (req, res) => {
+    res.render('confirm');
+});
 
 //Define a route for the submission of job posting data
 app.post('/confirm', (req, res) => {
