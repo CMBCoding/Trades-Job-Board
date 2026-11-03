@@ -9,6 +9,14 @@
     --darkcyan: #145375;
 }
 
+/* Gooogle Fonts - Wallpoet */
+.wallpoet {
+  font-family: "Wallpoet", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+
 @media screen and (min-width: 600px) {
     main {
         width: 100%;
@@ -17,8 +25,20 @@
 
 }
 
+/* Main and Form */
+#intro {
+    text-align: center;
+}
+
+#intro > h1 {
+    margin: 1rem;
+    color: var(--darkcyan);
+    font-size: 3rem;
+}
+
 main {
     background-color: var(--light-blue);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5rem auto;
     width: 60%;
     border: 0;
@@ -87,8 +107,11 @@ main {
     background-color: #ffffff;
 }
 
+/* Error spans */
+
 .error-msg {
     display: none;
+    text-shadow: 3px 5px 2px #474747, 2px 2px 1px rgba(255,255,255,0);
     color: red;
     font-weight: 600;
     font-style: italic;
