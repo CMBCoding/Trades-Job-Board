@@ -42,7 +42,7 @@ app.post('/submit-post', (req, res) => {
     console.log(post);
 
     //Display a confirmation page after successful submission of a post
-    res.render('confirm', {postings});
+    res.render('confirm', {post});
 })
 
 
