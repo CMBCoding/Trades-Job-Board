@@ -14,13 +14,15 @@ app.use(express.static('public'));
 //Middleware via express to parse form data and store them in the req.body
 app.use(express.urlencoded({extended: true}));
 
+app.set('view engine', 'ejs');
+
 //Array to hold and parse the data from the form
 const postings = [];
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
 app.get('/', (req, res) => {
-    res.sendFile(`${import.meta.dirname}/views/home.html`)
+    res.render('home');
 });
 
 //Define a route for the submission of job posting data
@@ -37,7 +39,7 @@ app.post('/submit-post', (req, res) => {
     console.log(post);
 
     //Display a confirmation page after successful submission of a post
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+    res.render('confirm', {postings});
 })
 
 
