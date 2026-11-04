@@ -193,5 +193,28 @@
         width: 23.5rem;
     }
 
+    /* Styling for job page */
+    #main-content {
+        margin: 5rem auto;
+        width: 99%;
+        padding: 0.5rem;
+    }
+
+    thead {
+        background-color: forestgreen;
+        border: 0;
+        border-radius: 1rem;
+    }
+
+
+    #apply {
+        border: 0;
+        border-radius: 1rem;
+        background-color: green;
+        color: white;
+        text-align: center;
+        padding: .5rem;
+    }
+
 
 }
