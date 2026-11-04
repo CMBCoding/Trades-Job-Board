@@ -176,6 +176,10 @@ td:first-child, th:first-child {
      border-left: none;
 }
 
+#apply:hover {
+    background-color: lightgreen;
+    cursor: pointer;
+}
 
 #apply {
     border: 0;
