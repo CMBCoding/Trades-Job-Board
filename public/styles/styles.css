@@ -115,9 +115,40 @@ a {
 
 /* Footer */
 
+.footer-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--forestgreen);
+    display: flex;
+}
+
 .footer-list {
     display: flex;
     flex-direction: row;
+}
+
+.footer-list > li {
+    list-style-type: none;
+    width: 100%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.footer-list > li > a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.footer-list > li > a:hover, 
+.footer-list > li > a:active {
+    color: var(--light-green);
 }
 
 /* Error spans */
@@ -218,6 +249,21 @@ td:first-child, th:first-child {
         width: 19.063rem;
     }
 
+    .footer-container {
+        color: #ffffff;
+        width: 100%;
+        padding: 1rem;
+        background-color: var(--forestgreen);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-list {
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (min-width: 600px) {
@@ -236,6 +282,11 @@ td:first-child, th:first-child {
 
     .error-msg, #error-msg-date, #error-msg-status  {
         width: 29.625rem;
+    }
+
+    .footer-list {
+        flex-direction: row;
+        width: 100%;
     }
 }
 
