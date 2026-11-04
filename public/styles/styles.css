@@ -78,7 +78,7 @@
     background-color: var(--darkcyan);
 }
 
-#form-button {
+#form-button, #jobs-button {
     font-weight: 600;
     display: grid;
     justify-content: center;
@@ -94,7 +94,8 @@
     background-color: var(--darkcyan);
 }
 
-#form-button:hover, #form-button:active {
+#form-button:hover, #form-button:active,
+#jobs-button:hover,  #jobs-button:active {
     color: var(--darkcyan);
     border: 2px solid var(--darkcyan);
     box-shadow: #ffffff 0px 3px;
@@ -162,7 +163,6 @@
         font-size: 2.4rem;
     }
     
-
     .form-legend {
         width: 15.625rem;
     }
