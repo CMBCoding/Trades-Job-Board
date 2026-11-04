@@ -135,6 +135,7 @@ a {
     width: 95%;
 }
 
+
 /* Styling for job page */
 #main-content {
     margin: 5rem auto;
@@ -149,9 +150,23 @@ thead {
     color: white;
 }
 
-#job-table {
-    border: 0;
-    border-radius: 1rem;
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+}
+
+th {
+    border-top: none;
+}
+
+td:first-child, th:first-child {
+     border-left: none;
 }
 
 
@@ -163,6 +178,7 @@ thead {
     text-align: center;
     padding: .5rem;
 }
+
 
 /* Responsive Stylings */
 @media screen and (min-width: 300px) {
