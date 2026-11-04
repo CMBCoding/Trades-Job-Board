@@ -29,7 +29,7 @@
                         <td><%= post.jobType %></td>
                         <td><%= post.jobStartDate %></td>
                         <td><%= post.jobEndDate %></td>
-                        <td><button id="apply" onclick="location.href='<%= post.jobUrl %>'">Apply Now</button></td>
+                        <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td>
                     </tr>
 
                 <% }); %>
