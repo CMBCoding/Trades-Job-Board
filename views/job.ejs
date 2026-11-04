@@ -2,42 +2,41 @@
 <html lang="en">
 <%-include('partials/head.ejs') %>
 <body>
-    <div id="jobPage">
-        <header>
+    <header>
 
-        </header>
-        <main id="main-content">
-            <table id="job-table" class="display">
-                <thead>
+    </header>
+    <main id="main-content">
+        <table id="job-table" class="display">
+            <thead>
+                <tr>
+                    <th>Job Title</th>
+                    <th>Company Name</th>
+                    <th>Trade Area</th>
+                    <th>Location</th>
+                    <th>Position Type</th>
+                    <th>Date Posted</th>
+                    <th>Post Expiration</th>
+                    <th>Apply Now</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% postings.forEach(post => { %> 
                     <tr>
-                        <th>Job Title</th>
-                        <th>Company Name</th>
-                        <th>Trade Area</th>
-                        <th>Location</th>
-                        <th>Position Type</th>
-                        <th>Date Posted</th>
-                        <th>Post Expiration</th>
-                        <th>Apply Now</th>
+                        <td><%= post.jobTitle %></td>
+                        <td><%= post.companyName %></td>
+                        <td><%= post.tradeArea %></td>
+                        <td><%= post.jobLocation %></td>
+                        <td><%= post.jobType %></td>
+                        <td><%= post.jobStartDate %></td>
+                        <td><%= post.jobEndDate %></td>
+                        <td><button id="apply" onclick="location.href='<%= post.jobUrl %>'">Apply Now</button></td>
                     </tr>
-                </thead>
-                <tbody>
-                    <% postings.forEach(post => { %> 
-                        <tr>
-                            <td><%= post.jobTitle %></td>
-                            <td><%= post.companyName %></td>
-                            <td><%= post.tradeArea %></td>
-                            <td><%= post.jobLocation %></td>
-                            <td><%= post.jobType %></td>
-                            <td><%= post.jobStartDate %></td>
-                            <td><%= post.jobEndDate %></td>
-                            <td><button id="apply" onclick="location.href='<%= post.jobUrl %>'">Apply Now</button></td>
-                        </tr>
 
-                    <% }); %>
-                </tbody>
-            </table>
-        </main>
-    </div>
+                <% }); %>
+            </tbody>
+        </table>
+    </main>
+
     <footer>
 
     </footer>
