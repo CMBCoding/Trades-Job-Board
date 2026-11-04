@@ -113,6 +113,13 @@ a {
     text-decoration: none;
 }
 
+/* Footer */
+
+.footer-list {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Error spans */
 
 .error-msg {
