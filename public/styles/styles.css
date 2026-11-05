@@ -300,7 +300,8 @@ td:first-child, th:first-child {
     }
 
     .footer-list {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 
 }
@@ -325,6 +326,7 @@ td:first-child, th:first-child {
 
     .footer-list {
         flex-direction: row;
+        flex-wrap: nowrap;
         width: 100%;
     }
 }
