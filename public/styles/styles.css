@@ -115,6 +115,7 @@ a {
 
 span.dtr-title {
     font-weight: 600;
+    margin: 0.5rem;
 }
 
 #job-table > tbody > tr.child > td > ul {
@@ -158,11 +159,20 @@ span.dtr-title {
     text-decoration: none;
     color: #ffffff;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
 }
 
 .footer-list > li > a:hover, 
 .footer-list > li > a:active {
     color: var(--light-green);
+}
+
+.icon {
+    width: 1.25rem;
+    margin: 0.25rem;
 }
 
 /* Error spans */
