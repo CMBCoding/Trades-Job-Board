@@ -73,10 +73,6 @@ const postings = [
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
-// app.get('/', (req, res) => {
-//     res.render('home');
-// });
-
 app.get('/', (req, res) => {
     res.render('job', {postings});
 })

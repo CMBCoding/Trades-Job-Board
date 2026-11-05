@@ -224,6 +224,33 @@ span.dtr-title {
     text-shadow: 3px 3px 0 var(--green), 6px 6px 0 var(--forestgreen);
 }
 
+#job-header > #nav-group {
+    background-color: var(--forestgreen);
+    padding: 1rem 0.5rem;
+    margin: 1rem 0;
+    /* border: 1px solid black; */
+    width: 100%;
+
+    #job-nav{
+    display:flex;
+    justify-content:space-evenly;
+
+    }
+    a {
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 0.2rem;
+        list-style-type: none;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight:600;
+        padding: 0.75rem;
+    }
+
+    a:hover {
+        background: rgb(209, 207, 207);
+    }
+}
+
 #main-content {
     margin: 1rem auto;
     width: 99%;
