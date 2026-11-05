@@ -279,6 +279,10 @@ td:first-child, th:first-child {
         padding: 0.5rem 0.25rem;
     }
 
+    #job-header > h1 {
+        font-size: 2.5rem;
+    }
+
     #page-heading {
         margin: 0;
         font-size: 2.25rem;
@@ -320,6 +324,10 @@ td:first-child, th:first-child {
 @media screen and (min-width: 600px) {
     #main {
         width: 32.125rem;
+    }
+
+    #job-header > h1 {
+        font-size: 4rem;
     }
 
     #page-heading  {
