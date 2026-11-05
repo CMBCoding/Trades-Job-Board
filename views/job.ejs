@@ -38,7 +38,21 @@
     </main>
     <script>
         new DataTable('#job-table', {
-            responsive: true
+            responsive: true,
+            columns: [
+                {name: 'job_title'},
+                {name: 'company_name'},
+                {name: 'trade_area'},
+                {name: 'job_location'},
+                {name: 'job_type'},
+                {name: 'start_date'},
+                {name: 'end_date'},
+                {name: 'apply'},
+            ],
+            order: {
+                name: 'start_date',
+                dir: 'asc'
+            }
         });
     </script>
 </body>
