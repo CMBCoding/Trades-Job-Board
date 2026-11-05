@@ -115,6 +115,7 @@ a {
 
 span.dtr-title {
     font-weight: 600;
+    margin: 0.5rem;
 }
 
 #job-table > tbody > tr.child > td > ul {
