@@ -207,8 +207,14 @@ span.dtr-title {
     min-height: 100vh;
 }
 
+#job-header {
+    background-image: url(https://wallpaperaccess.com/full/429865.jpg);
+    color: white;
+    flex: 1;
+}
+
 #main-content {
-    margin: 5rem auto;
+    margin: 1rem auto;
     width: 99%;
     padding: 0.5rem;
     flex: 1;
