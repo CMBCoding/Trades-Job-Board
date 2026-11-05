@@ -77,6 +77,10 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/add-post', (req, res) => {
+    res.render('add-post');
+});
+
 app.get('/confirm', (req, res) => {
     res.render('confirm');
 });

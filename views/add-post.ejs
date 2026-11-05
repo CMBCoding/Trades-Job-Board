@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include('partials/head.ejs') %>
+<title>Add Jobs - Green River College</title>
+<body>
+    <%-include('partials/header.ejs') %>
+    <main id="main">
+        <form action="/confirm" method="POST" id="job-post-form">
+
+                <div id="intro" >
+                    <h1 class="wallpoet" id="page-heading">Trades Board</h1>
+                    <p>Welcome the Trades' Department job postings portal for Green River College</p>
+                    <p>Please fill out the form below to submit a posting.</p>
+                </div>
+                
+                <fieldset class="form-fieldset" id="position-info">
+                    <legend class="form-legend">Position Information</legend>
+                    <!-- Job title input -->
+                    <div class="input-group" id="jobTitleGroup">
+                        <label for="jobTitle">Job Title:</label>
+                        <span class="error-msg" id="error-msg-title">Please enter a job title.</span>
+                        <input type="text" name="jobTitle" id="jobTitle" placeholder="Position title"></input>
+                    </div>
+                    
+
+                    <!-- Company name input -->
+                    <div class="input-group" id="companyNameGroup">
+                        <label for="companyName">Company Name:</label>
+                        <span class="error-msg" id="error-msg-company">Please select a company name.</span>
+                        <input type="text" name="companyName" id="companyName" placeholder="Company name"></input>
+                    </div>
+                    
+
+                    <!-- Trade Area input -->
+                    <div class="input-group" id="tradeAreaGroup">
+                        <label for="tradeArea">Trade Area:</label>
+                        <span class="error-msg" id="error-msg-trade">Please select a trade category.</span>
+                        <select name="tradeArea" id="tradeArea">
+                            <option value="none">-- Select a Trade --</option>
+                            <option value="Automotive">Automotive</option>
+                            <option value="Carpentry">Carpentry</option>
+                            <option value="Manufacturing">Manufacturing</option>
+                            <option value="Megatronics">Megatronics</option>
+                            <option value="Welding">Welding</option>
+                        </select>
+                    </div>
+                    
+
+                    <!-- Location input -->
+                    <div class="input-group" id="jobLocationGroup">
+                        <label for="jobLocation">Location:</label>
+                        <span class="error-msg" id="error-msg-location">Please select a location filter.</span>
+                        <select name="jobLocation" id="jobLocation">
+                            <option value="none">-- Select a Location --</option>
+                            <option value="5mi">Within 5 miles</option>
+                            <option value="15mi">Within 15 miles</option>
+                            <option value="25mi">Within 25 miles</option>
+                            <option value="50mi">Within 50 miles</option>
+                        </select>
+                    </div>
+                    
+                </fieldset>
+
+                <!-- Full/partTime inputs -->
+                <fieldset class="form-fieldset" id="positionStatusField">
+                    <legend class="form-legend">Position Status</legend>
+                    <div class="input-group" id="positionStatus">
+                        <label for="partTime">
+                            <input type="radio" name="jobType" id="partTime" value="Part Time">
+                            Part Time
+                        </label>
+
+                        <label for="fullTime">
+                            <input type="radio" name="jobType" id="fullTime" value="Full Time">
+                            Full Time
+                        </label>
+                    </div>
+                    <span class="error-msg" id="error-msg-status">Please select one of the above options.</span>
+                </fieldset>
+
+                <!-- Post and Expiration date inputs -->
+                <fieldset class="form-fieldset" id="positionDatesField">
+                    <legend class="form-legend">Position Start/End Dates</legend>
+
+                    <div class="input-group">
+                        <label for="jobStartDate">Start Date:</label>
+                        <input type="date" name="jobStartDate" id="jobStartDate">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="jobEndDate">End Date:</label>
+                        <input type="date" name="jobEndDate" id="jobEndDate">
+                    </div>
+                    <span class="error-msg" id="error-msg-date">Please enter start and end date for the posting.</span>
+                </fieldset>
+
+                <!-- Job url input -->
+                <fieldset class="form-fieldset" id="jobUrlField">
+                    <legend class="form-legend">Application URL</legend>
+                    <div class="input-group">
+                        <label for="jobUrl">URL:</label>
+                        <input type="url" name="jobUrl" id="jobUrl" placeholder="https//www.website.com">
+                        <span class="error-msg" id="error-msg-url">Please enter a valid url for the application.</span>
+                    </div>
+                </fieldset>
+
+                <button type="submit" id="form-button">Post</button>
+        </form>
+    </main>
+    <%-include('partials/footer.ejs') %>
+</body>
+</html>
