@@ -73,9 +73,13 @@ const postings = [
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
+// app.get('/', (req, res) => {
+//     res.render('home');
+// });
+
 app.get('/', (req, res) => {
-    res.render('home');
-});
+    res.render('job', {postings});
+})
 
 app.get('/add-post', (req, res) => {
     res.render('add-post');
@@ -85,9 +89,7 @@ app.get('/confirm', (req, res) => {
     res.render('confirm');
 });
 
-app.get('/job', (req, res) => {
-    res.render('job', {postings});
-})
+
 
 //Define a route for the submission of job posting data
 app.post('/confirm', (req, res) => {
