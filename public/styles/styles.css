@@ -211,6 +211,17 @@ span.dtr-title {
     background-image: url(https://wallpaperaccess.com/full/429865.jpg);
     color: white;
     flex: 1;
+    min-height: 13.625rem;
+    width: 100%;
+    display: flex;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#job-header > h1 {
+    text-shadow: 3px 3px 0 var(--green), 6px 6px 0 var(--forestgreen);
 }
 
 #main-content {
