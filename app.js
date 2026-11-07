@@ -27,7 +27,8 @@ const postings = [
       jobType: 'Full Time',
       jobStartDate: '2026-11-15',
       jobEndDate: '2027-02-15',
-      jobUrl: 'https://www.google.com/'
+      jobUrl: 'https://www.google.com/',
+      timestamp: '11/6/2026, 5:09:11 PM'
     },
     {
       jobTitle: "IT Support Technician",
@@ -37,7 +38,9 @@ const postings = [
       jobType: "Part Time",
       jobStartDate: "2026-11-10",
       jobEndDate: "2027-01-10",
-      jobUrl: "https://www.google.com/"
+      jobUrl: "https://www.google.com/",
+      timestamp: '11/6/2026, 5:09:11 PM'
+
     },
     {
       jobTitle: "Frontend Developer",
@@ -47,7 +50,8 @@ const postings = [
       jobType: "Full Time",
       jobStartDate: "2026-12-01",
       jobEndDate: "2027-03-01",
-      jobUrl: "https://www.google.com/"
+      jobUrl: "https://www.google.com/",
+      timestamp: '11/6/2026, 5:09:11 PM'
     },
     {
       jobTitle: "Computer Repair Assistant",
@@ -57,7 +61,9 @@ const postings = [
       jobType: "Part Time",
       jobStartDate: "2026-11-20",
       jobEndDate: "2027-02-20",
-      jobUrl: "https://www.google.com/"
+      jobUrl: "https://www.google.com/",
+      timestamp: '11/6/2026, 5:09:11 PM'
+
     },
     {
       jobTitle: "Junior Backend Developer",
@@ -67,14 +73,15 @@ const postings = [
       jobType: "Full Time",
       jobStartDate: "2027-01-05",
       jobEndDate: "2027-04-05",
-      jobUrl: "https://www.google.com/"
+      jobUrl: "https://www.google.com/",
+      timestamp: '11/6/2026, 5:09:11 PM'
     }
 ];
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
 app.get('/', (req, res) => {
-    res.render('job', {postings});
+    res.render('jobs', {postings});
 })
 
 app.get('/add-post', (req, res) => {

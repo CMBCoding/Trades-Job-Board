@@ -14,9 +14,10 @@
                     <th>Trade Area</th>
                     <th>Location</th>
                     <th>Position Type</th>
-                    <th>Date Posted</th>
-                    <th>Post Expiration</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
                     <th data-orderable="false">Apply Now</th>
+                    <th>Post Date</th>
                 </tr>
             </thead>
             <tbody>
@@ -30,6 +31,7 @@
                         <td><%= post.jobStartDate %></td>
                         <td><%= post.jobEndDate %></td>
                         <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td>
+                        <td><%= post.timestamp.toLocaleString() %></td>
                     </tr>
 
                 <% }); %>
@@ -48,6 +50,7 @@
                 {name: 'start_date'},
                 {name: 'end_date'},
                 {name: 'apply'},
+                {name: 'post_date'}
             ],
             order: {
                 name: 'start_date',
