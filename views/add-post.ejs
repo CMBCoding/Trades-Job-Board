@@ -61,17 +61,34 @@
                     
                 </fieldset>
 
+                <!-- Job/Internship inputs -->
+                 <fieldset class="form-fieldset" id="positionTypeField">
+                    <legend class="form-legend">Position Type</legend>
+                    <div class="input-group" id="positionType">
+                        <label for="Job">
+                            <input type="radio" name="positionType" id="Job" value="Job">
+                            Job
+                        </label>
+
+                        <label for="Internship">
+                            <input type="radio" name="positionType" id="Internship" value="Internship">
+                            Internship
+                        </label>
+                    </div>
+                    <span class="error-msg" id="error-msg-type">Please select one of the above options.</span>
+                </fieldset>
+
                 <!-- Full/partTime inputs -->
                 <fieldset class="form-fieldset" id="positionStatusField">
                     <legend class="form-legend">Position Status</legend>
                     <div class="input-group" id="positionStatus">
                         <label for="partTime">
-                            <input type="radio" name="jobType" id="partTime" value="Part Time">
+                            <input type="radio" name="positionStatus" id="partTime" value="Part Time">
                             Part Time
                         </label>
 
                         <label for="fullTime">
-                            <input type="radio" name="jobType" id="fullTime" value="Full Time">
+                            <input type="radio" name="positionStatus" id="fullTime" value="Full Time">
                             Full Time
                         </label>
                     </div>
