@@ -12,13 +12,14 @@
             <p><strong>Company:</strong> <%= post.companyName %></p>
             <p><strong>Trade area:</strong> <%= post.tradeArea %></p>
             <p><strong>Job location:</strong> <%= post.jobLocation %></p>
-            <p><strong>Job Type:</strong> <%= post.jobType %></p>
+            <p><strong>Job Type:</strong> <%= post.positionType %></p>
+            <p><strong>Job Status:</strong> <%= post.positionStatus %></p>
             <p><strong>Start date:</strong> <%= post.jobStartDate %></p>
             <p><strong>End date:</strong> <%= post.jobEndDate %></p>
             <p><strong>URL:</strong> <%= post.jobUrl %></p>
             <p><strong>Date and Time:</strong> <%= post.timestamp.toLocaleString() %></p>
 
-            <a href="/job">
+            <a href="/">
                 <button type="submit" id="jobs-button">To Jobs Page</button>
             </a>
         </div>
