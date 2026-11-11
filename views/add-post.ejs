@@ -49,14 +49,8 @@
                     <!-- Location input -->
                     <div class="input-group" id="jobLocationGroup">
                         <label for="jobLocation">Location:</label>
-                        <span class="error-msg" id="error-msg-location">Please select a location filter.</span>
-                        <select name="jobLocation" id="jobLocation">
-                            <option value="none">-- Select a Location --</option>
-                            <option value="5mi">Within 5 miles</option>
-                            <option value="15mi">Within 15 miles</option>
-                            <option value="25mi">Within 25 miles</option>
-                            <option value="50mi">Within 50 miles</option>
-                        </select>
+                        <span class="error-msg" id="error-msg-location">Please type in a valid location.</span>
+                        <input type="text" name="jobLocation" id="jobLocation" placeholder="Auburn, WA">
                     </div>
                     
                 </fieldset>

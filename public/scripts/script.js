@@ -17,12 +17,13 @@ document.getElementById("job-post-form").onsubmit = () => {
         ([-a-zA-Z0-9()@:%_\+.~#?&//=]*) - Matches what follows the domain extension (a-z, 0-9, special characters)
     */
     const urlRegex = /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/;
+    const locationRegex = /^[A-Za-z]+(?: [A-Za-z]+)*, [A-Z]{2}$/;
     
     //Get the constituent form elements and assign them to variables
     let jobTitle = document.getElementById("jobTitle").value.trim();
     let companyName = document.getElementById("companyName").value.trim();
     let trade = document.getElementById("tradeArea").value;
-    let jobLocation = document.getElementById("jobLocation").value;
+    let jobLocation = document.getElementById("jobLocation").value.trim();
     let jobDateStart = document.getElementById("jobStartDate").value;
     let jobDateEnd = document.getElementById("jobEndDate").value;
     let jobLink = document.getElementById("jobUrl").value.trim();
@@ -46,7 +47,7 @@ document.getElementById("job-post-form").onsubmit = () => {
     }
 
     //Validate location field 
-    if(jobLocation === "none") {
+    if(jobLocation === "" && (!locationRegex.test(jobLocation))) {
         isValid = false;
         document.getElementById("error-msg-location").style.display = "block";
     }
