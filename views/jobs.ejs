@@ -24,16 +24,16 @@
             <tbody>
                 <% postings.forEach(post => { %> 
                     <tr>
-                        <td><%= post.jobTitle %></td>
-                        <td><%= post.companyName %></td>
-                        <td><%= post.tradeArea %></td>
-                        <td><%= post.jobLocation %></td>
-                        <td><%= post.positionType %></td>
-                        <td><%= post.positionStatus %></td>
-                        <td><%= post.jobStartDate %></td>
-                        <td><%= post.jobEndDate %></td>
-                        <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td>
-                        <td><%= post.timestamp.toLocaleString() %></td>
+                        <td><%= post.JobTitle %></td>
+                        <td><%= post.CompanyName %></td>
+                        <td><%= post.TradeArea %></td>
+                        <td><%= post.Location %></td>
+                        <td><%= post.PositionType %></td>
+                        <td><%= post.PositionStatus %></td>
+                        <td><%= post.StartDate %></td>
+                        <td><%= post.EndDate %></td>
+                        <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td>
+                        <td></td>
                     </tr>
 
                 <% }); %>
