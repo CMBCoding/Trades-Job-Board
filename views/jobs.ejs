@@ -33,7 +33,7 @@
                         <td><%= post.StartDate %></td>
                         <td><%= post.EndDate %></td>
                         <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td>
-                        <td></td>
+                        <td><%= post.PostDate %></td>
                     </tr>
 
                 <% }); %>

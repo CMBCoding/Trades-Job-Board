@@ -74,7 +74,7 @@ app.post('/confirm', async(req, res) => {
 
     const sql = `INSERT INTO postings (JobTitle, CompanyName, 
     TradeArea, Location, PositionType, 
-    PositionStatus, StartDate, EndDate, PostDate, JobUrl)
+    PositionStatus, StartDate, EndDate, JobUrl)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`
 
     const params = [  
