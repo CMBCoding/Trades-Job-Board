@@ -19,7 +19,7 @@ const PORT = 3009;
 const pool = mysql2.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD ,
+  password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT
 }).promise();
@@ -71,6 +71,8 @@ app.post('/confirm', async(req, res) => {
     console.log(req.body);
 
     const post = req.body;
+    post.timestamp = new Date();
+
 
     const sql = `INSERT INTO postings (JobTitle, CompanyName, 
     TradeArea, Location, PositionType, 
