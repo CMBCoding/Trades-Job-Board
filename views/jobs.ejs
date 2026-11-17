@@ -10,6 +10,7 @@
             <thead>
                 <tr>
                     <th>Job Title</th>
+                    <th>Post Date</th>
                     <th>Company Name</th>
                     <th>Trade Area</th>
                     <th>Location</th>
@@ -17,24 +18,23 @@
                     <th>Position Status</th>
                     <th>Start Date</th>
                     <th>End Date</th>
-                    <th data-orderable="false">Apply Now</th>
-                    <th>Post Date</th>
+                    <th data-orderable="false">Apply Now</th>    
                 </tr>
             </thead>
             <tbody>
                 <% postings.forEach(post => { %> 
                     <tr>
-                        <td><%= post.jobTitle %></td>
-                        <td><%= post.companyName %></td>
-                        <td><%= post.tradeArea %></td>
-                        <td><%= post.jobLocation %></td>
-                        <td><%= post.positionType %></td>
-                        <td><%= post.positionStatus %></td>
-                        <td><%= post.jobStartDate %></td>
-                        <td><%= post.jobEndDate %></td>
-                        <!-- <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td> -->
-                         <td><a href="<%= post.jobUrl %>" target="_blank" class="bnt-link">Apply</a></td>
-                        <td><%= post.timestamp.toLocaleString() %></td>
+                        <td><%= post.JobTitle %></td>
+                        <td><%= post.PostDate %></td>
+                        <td><%= post.CompanyName %></td>
+                        <td><%= post.TradeArea %></td>
+                        <td><%= post.Location %></td>
+                        <td><%= post.PositionType %></td>
+                        <td><%= post.PositionStatus %></td>
+                        <td><%= post.StartDate %></td>
+                        <td><%= post.EndDate %></td>
+                        <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td>
+                        
                     </tr>
 
                 <% }); %>
@@ -46,6 +46,7 @@
             responsive: true,
             columns: [
                 {name: 'job_title'},
+                {name: 'post_date'},
                 {name: 'company_name'},
                 {name: 'trade_area'},
                 {name: 'job_location'},
@@ -53,8 +54,8 @@
                 {name: 'position_status'},
                 {name: 'start_date'},
                 {name: 'end_date'},
-                {name: 'apply'},
-                {name: 'post_date'}
+                {name: 'apply'}
+                
             ],
             order: {
                 name: 'start_date',

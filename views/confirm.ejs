@@ -8,6 +8,7 @@
         <div class="box">
             <h1 class="wallpoet" id="page-heading">Post Successful!</h1>
             <h2>Job posting summary </h2>
+            <p><strong>Date and Time: </strong> <%= post.timestamp.toLocaleString() %></p>
             <p><strong>Job Title:</strong> <%= post.jobTitle %></p>
             <p><strong>Company:</strong> <%= post.companyName %></p>
             <p><strong>Trade area:</strong> <%= post.tradeArea %></p>
@@ -17,8 +18,6 @@
             <p><strong>Start date:</strong> <%= post.jobStartDate %></p>
             <p><strong>End date:</strong> <%= post.jobEndDate %></p>
             <p><strong>URL:</strong> <%= post.jobUrl %></p>
-            <p><strong>Date and Time:</strong> <%= post.timestamp.toLocaleString() %></p>
-
             <a href="/">
                 <button type="submit" id="jobs-button">To Jobs Page</button>
             </a>

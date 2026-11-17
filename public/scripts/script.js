@@ -91,6 +91,10 @@ document.getElementById("job-post-form").onsubmit = () => {
         isValid = false; //Invalidate the input
         document.getElementById("error-msg-date").style.display = "block";
     }
+    else if (jobDateEnd <= jobDateStart) {
+        isValid = false; //Invalidate the input
+        document.getElementById("error-msg-date").style.display = "block";
+    }
 
     //Validate the job link URL 
     if (jobLink === "" && (!urlRegex.test(jobLink))) {
