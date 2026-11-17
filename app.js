@@ -32,69 +32,7 @@ app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
 //Array to hold and parse the data from the form
-const postings = [
-    
-    {
-      jobTitle: 'Junior Software Developer',
-      companyName: 'TechNova Solutions',
-      tradeArea: 'Manufacturing',
-      jobLocation: '15mi',
-      positionType: 'Internship',
-      positionStatus: 'Full Time',
-      jobStartDate: '2026-11-15',
-      jobEndDate: '2027-02-15',
-      jobUrl: 'https://www.google.com/',
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "IT Support Technician",
-      companyName: "BrightPath Technologies",
-      tradeArea: "Automotive",
-      jobLocation: "5mi",
-      positionType: 'Job',
-      positionStatus: 'Part Time',
-      jobStartDate: "2026-11-10",
-      jobEndDate: "2027-01-10",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Frontend Developer",
-      companyName: "PixelWorks",
-      tradeArea: "Carpentry",
-      jobLocation: "25mi",
-      positionType: 'Internship',
-      positionStatus: 'Full Time',
-      jobStartDate: "2026-12-01",
-      jobEndDate: "2027-03-01",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Computer Repair Assistant",
-      companyName: "FixPoint Computers",
-      tradeArea: "Welding",
-      jobLocation: "50mi",
-      positionType: 'Internship',
-      positionStatus: 'Part Time',
-      jobStartDate: "2026-11-20",
-      jobEndDate: "2027-02-20",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Junior Backend Developer",
-      companyName: "CloudCore Systems",
-      tradeArea: "Megatronics",
-      jobLocation: "15mi",
-      positionType: 'Job',
-      positionStatus: 'Full Time',
-      jobStartDate: "2027-01-05",
-      jobEndDate: "2027-04-05",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    }
-];
+const postings = [];
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
