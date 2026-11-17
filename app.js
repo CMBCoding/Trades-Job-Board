@@ -1,5 +1,12 @@
 // Import express module
 import express from 'express';
+//Import the mysql2 module
+import mysql2 from 'mysql2'
+//Import the dotenv module
+import dotenev from 'dotenv'
+
+//Load in the the .env file
+dotenev.config();
 
 // Create instance of express application
 const app = express();
@@ -8,78 +15,24 @@ const app = express();
 // for our server to listen on
 const PORT = 3009;
 
+//Create a pool to connect to the sql database
+const pool = mysql2.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD ,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
+}).promise();
+
 // Enable static file serving
 app.use(express.static('public'));
 
 //Middleware via express to parse form data and store them in the req.body
 app.use(express.urlencoded({extended: true}));
-
 app.set('view engine', 'ejs');
 
 //Array to hold and parse the data from the form
-const postings = [
-    
-    {
-      jobTitle: 'Junior Software Developer',
-      companyName: 'TechNova Solutions',
-      tradeArea: 'Manufacturing',
-      jobLocation: '15mi',
-      positionType: 'Internship',
-      positionStatus: 'Full Time',
-      jobStartDate: '2026-11-15',
-      jobEndDate: '2027-02-15',
-      jobUrl: 'https://www.google.com/',
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "IT Support Technician",
-      companyName: "BrightPath Technologies",
-      tradeArea: "Automotive",
-      jobLocation: "5mi",
-      positionType: 'Job',
-      positionStatus: 'Part Time',
-      jobStartDate: "2026-11-10",
-      jobEndDate: "2027-01-10",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Frontend Developer",
-      companyName: "PixelWorks",
-      tradeArea: "Carpentry",
-      jobLocation: "25mi",
-      positionType: 'Internship',
-      positionStatus: 'Full Time',
-      jobStartDate: "2026-12-01",
-      jobEndDate: "2027-03-01",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Computer Repair Assistant",
-      companyName: "FixPoint Computers",
-      tradeArea: "Welding",
-      jobLocation: "50mi",
-      positionType: 'Internship',
-      positionStatus: 'Part Time',
-      jobStartDate: "2026-11-20",
-      jobEndDate: "2027-02-20",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    },
-    {
-      jobTitle: "Junior Backend Developer",
-      companyName: "CloudCore Systems",
-      tradeArea: "Megatronics",
-      jobLocation: "15mi",
-      positionType: 'Job',
-      positionStatus: 'Full Time',
-      jobStartDate: "2027-01-05",
-      jobEndDate: "2027-04-05",
-      jobUrl: "https://www.google.com/",
-      timestamp: '11/6/2026, 5:09:11 PM'
-    }
-];
+const postings = [];
 //Add arrays for each posting type to sort later
 
 //Define a default route ("/")
