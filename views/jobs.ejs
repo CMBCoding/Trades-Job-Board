@@ -32,7 +32,8 @@
                         <td><%= post.positionStatus %></td>
                         <td><%= post.jobStartDate %></td>
                         <td><%= post.jobEndDate %></td>
-                        <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td>
+                        <!-- <td><button id="apply" onclick="window.open('<%= post.jobUrl %>', '_blank')">Apply Now</button></td> -->
+                         <td><a href="<%= post.jobUrl %>" target="_blank" class="bnt-link">Apply</a></td>
                         <td><%= post.timestamp.toLocaleString() %></td>
                     </tr>
 

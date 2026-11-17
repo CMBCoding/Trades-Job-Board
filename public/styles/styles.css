@@ -284,13 +284,17 @@ td:first-child, th:first-child {
      border-left: none;
 }
 
-#apply:hover {
+/* #apply:hover {
     background-color: lightgreen;
     cursor: pointer;
 }
 
 #apply:focus {
     background-color: #a0d4a0;
+}
+
+#apply:visited {
+    background-color: #27a127;
 }
 
 #apply:active {
@@ -305,6 +309,59 @@ td:first-child, th:first-child {
     color: white;
     text-align: center;
     padding: .5rem;
+} */
+
+/* Base button-link styles */
+.btn-link {
+  /* Layout & Box Model */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  box-sizing: border-box;
+  min-height: 44px; /* Touch target minimum */
+  
+  /* Typography */
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  
+  /* Colors & Appearance */
+  background-color: var(--green);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  
+  /* Smooth interaction transition */
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+/* Hover state */
+.btn-link:hover {
+  background-color: #1b7318;
+  color: #ffffff;
+  text-decoration: none;
+}
+ 
+/* Active / Pressed state */
+.btn-link:active {
+  background-color: #43cf53;
+  transform: translateY(1px);
+}
+ 
+/* Focus state for keyboard accessibility (WCAG 2.4.7 / 2.4.11) */
+.btn-link:focus-visible {
+  outline: 3px solid #229749;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+}
+
+.btn-link:visited {
+    background-color: #008000;
 }
 
 /* Responsive Stylings */
