@@ -238,12 +238,12 @@ span.dtr-title {
     }
     a {
         background-color: white;
-        border: 1px solid black;
         border-radius: 0.2rem;
         list-style-type: none;
         font-family:Arial, Helvetica, sans-serif;
         font-weight:600;
         padding: 0.75rem;
+        color: var(--forestgreen);
     }
 
     a:hover {

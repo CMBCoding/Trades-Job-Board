@@ -1,5 +1,12 @@
 // Import express module
 import express from 'express';
+//Import the mysql2 module
+import mysql2 from 'mysql2'
+//Import the dotenv module
+import dotenev from 'dotenv'
+
+//Load in the the .env file
+dotenev.config();
 
 // Create instance of express application
 const app = express();
@@ -8,12 +15,20 @@ const app = express();
 // for our server to listen on
 const PORT = 3009;
 
+//Create a pool to connect to the sql database
+const pool = mysql2.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD ,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
+}).promise();
+
 // Enable static file serving
 app.use(express.static('public'));
 
 //Middleware via express to parse form data and store them in the req.body
 app.use(express.urlencoded({extended: true}));
-
 app.set('view engine', 'ejs');
 
 //Array to hold and parse the data from the form
