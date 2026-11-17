@@ -11,8 +11,7 @@ dotenev.config();
 // Create instance of express application
 const app = express();
 
-// Define port number
-// for our server to listen on
+// Define port number for our server to listen on
 const PORT = 3009;
 
 //Create a pool to connect to the sql database
@@ -33,12 +32,6 @@ app.set('view engine', 'ejs');
 
 //Array to hold and parse the data from the form
 const postings = [];
-//Add arrays for each posting type to sort later
-
-//Define a default route ("/")
-// app.get('/', (req, res) => {
-//     res.render('jobs', {postings});
-// })
 
 app.get('/add-post', (req, res) => {
     res.render('add-post');
@@ -67,7 +60,7 @@ app.get('/', async(req, res) => {
 app.post('/confirm', async(req, res) => {
 
   try {
-        //Generate a JSON object to store the order data
+    //Generate a JSON object to store the order data
     console.log(req.body);
 
     const post = req.body;
@@ -104,16 +97,7 @@ app.post('/confirm', async(req, res) => {
     console.error('Error is saving the posting:', err);
     res.status(500).send(`Sorry, there was an error in the procesisng of the post: ${err.message}`);
   }
-    
-
-    // //Add the post to the postings array
-    // postings.push(post);
-    // console.log(post);
-
-    // //Display a confirmation page after successful submission of a post
-    // res.render('confirm', {post, postings});
 });
-
 
 // Start the server on the designated port
 app.listen(PORT, () => {
