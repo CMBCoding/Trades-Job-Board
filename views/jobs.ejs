@@ -33,7 +33,8 @@
                         <td><%= post.PositionStatus %></td>
                         <td><%= post.StartDate %></td>
                         <td><%= post.EndDate %></td>
-                        <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td>
+                        <!-- <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td> -->
+                         <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                         
                     </tr>
 

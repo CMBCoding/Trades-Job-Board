@@ -342,26 +342,26 @@ td:first-child, th:first-child {
  
 /* Hover state */
 .btn-link:hover {
-  background-color: #1b7318;
+  background-color: #135e11;
   color: #ffffff;
   text-decoration: none;
 }
  
 /* Active / Pressed state */
 .btn-link:active {
-  background-color: #43cf53;
+  background-color: #177322;
   transform: translateY(1px);
 }
  
 /* Focus state for keyboard accessibility (WCAG 2.4.7 / 2.4.11) */
 .btn-link:focus-visible {
-  outline: 3px solid #229749;
+  outline: 3px solid #000000;
   outline-offset: 3px;
-  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 2px rgba(29, 253, 13, 0.25);
 }
 
 .btn-link:visited {
-    background-color: #008000;
+    background-color: var(--light-green);
 }
 
 /* Responsive Stylings */
