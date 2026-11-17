@@ -289,6 +289,15 @@ td:first-child, th:first-child {
     cursor: pointer;
 }
 
+#apply:focus {
+    background-color: #a0d4a0;
+}
+
+#apply:active {
+    background-color: #27a127;
+
+}
+
 #apply {
     border: 0;
     border-radius: 1rem;
@@ -297,7 +306,6 @@ td:first-child, th:first-child {
     text-align: center;
     padding: .5rem;
 }
-
 
 /* Responsive Stylings */
 @media screen and (min-width: 300px) {
