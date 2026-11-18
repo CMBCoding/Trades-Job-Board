@@ -25,15 +25,14 @@
                 <% postings.forEach(post => { %> 
                     <tr>
                         <td><%= post.JobTitle %></td>
-                        <td><%= post.PostDate %></td>
+                        <td><%= post.PostDate.toLocaleString()%></td>
                         <td><%= post.CompanyName %></td>
                         <td><%= post.TradeArea %></td>
                         <td><%= post.Location %></td>
                         <td><%= post.PositionType %></td>
                         <td><%= post.PositionStatus %></td>
-                        <td><%= post.StartDate %></td>
-                        <td><%= post.EndDate %></td>
-                        <!-- <td><button id="apply" onclick="window.open('<%= post.JobUrl %>', '_blank')">Apply Now</button></td> -->
+                        <td><%= post.StartDate.toLocaleString() %></td>
+                        <td><%= post.EndDate.toLocaleString() %></td>
                          <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                         
                     </tr>
@@ -59,8 +58,8 @@
                 
             ],
             order: {
-                name: 'start_date',
-                dir: 'asc'
+                name: 'post_date',
+                dir: 'desc'
             }
         });
     </script>

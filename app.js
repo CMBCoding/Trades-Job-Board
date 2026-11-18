@@ -70,7 +70,7 @@ app.post('/confirm', async(req, res) => {
     const sql = `INSERT INTO postings (JobTitle, CompanyName, 
     TradeArea, Location, PositionType, 
     PositionStatus, StartDate, EndDate, JobUrl)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);`
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`
 
     const params = [  
       post.jobTitle,
@@ -81,7 +81,6 @@ app.post('/confirm', async(req, res) => {
       post.positionStatus,
       post.jobStartDate,
       post.jobEndDate,
-      post.PostDate || null, //Setting or null allows us to figure this time stamp later
       post.jobUrl
     ]
 
