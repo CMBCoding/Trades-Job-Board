@@ -45,8 +45,7 @@ app.get('/confirm', (req, res) => {
 app.get('/', async(req, res) => {
   try {
     //Pull the postings from the database
-    const [postings] = await pool.query(`SELECT * FROM postings 
-      ORDER BY PostDate DESC`);
+    const [postings] = await pool.query(`SELECT * FROM postings WHERE EndDate >= CURRENT_DATE() ORDER BY PostDate DESC;`);
     console.log(postings);
     //Render the pulled postings onto the jobs board
     res.render('jobs', {postings});
