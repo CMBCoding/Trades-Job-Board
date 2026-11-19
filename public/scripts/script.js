@@ -86,16 +86,6 @@ document.getElementById("job-post-form").onsubmit = () => {
         document.getElementById("error-msg-status").style.display = "block";
     }
 
-    //Validate the start and end dates of the job
-    if (jobDateStart === "" || jobDateEnd === "") {
-        isValid = false; //Invalidate the input
-        document.getElementById("error-msg-date").style.display = "block";
-    }
-    else if (jobDateEnd <= jobDateStart) {
-        isValid = false; //Invalidate the input
-        document.getElementById("error-msg-date").style.display = "block";
-    }
-
     //Validate the job link URL 
     if (jobLink === "" && (!urlRegex.test(jobLink))) {
         isValid = false; //Invalidate the input
