@@ -351,48 +351,48 @@ td:first-child, th:first-child {
     }
 
     #job-header > #nav-group {
-    #job-nav {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: column;
-    }
+        #job-nav {
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: column;
+        }
 
-    #page-heading {
-        margin: 0;
-        font-size: 2.25rem;
-    }
+        #page-heading {
+            margin: 0;
+            font-size: 2.25rem;
+        }
 
-    #job-post-form {
-        padding: 0.5rem 0.25rem;
-        margin: .2em auto;
-    }
+        #job-post-form {
+            padding: 0.5rem 0.25rem;
+            margin: .2em auto;
+        }
 
-    .form-legend {
-        width: 14rem;
-    }
+        .form-legend {
+            width: 14rem;
+        }
 
-    #error-msg-date,
-    #error-msg-status {
-        margin-left: 0.55rem;
-        width: 19.063rem;
-    }
+        #error-msg-date,
+        #error-msg-status {
+            margin-left: 0.55rem;
+            width: 19.063rem;
+        }
 
-    .footer-container {
-        color: #ffffff;
-        width: 100%;
-        padding: 1rem;
-        background-color: var(--forestgreen);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+        .footer-container {
+            color: #ffffff;
+            width: 100%;
+            padding: 1rem;
+            background-color: var(--forestgreen);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .footer-list {
-        flex-direction: row;
-        flex-wrap: wrap;
+        .footer-list {
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
     }
-
 }
 
 @media screen and (min-width: 600px) {
@@ -405,27 +405,28 @@ td:first-child, th:first-child {
     }
 
     #job-header > #nav-group {
-    #job-nav {
-        flex-direction: row;
-    }
+        #job-nav {
+            flex-direction: row;
+        }
 
-    #page-heading  {
-        margin: 1rem auto;
-        font-size: 2.4rem;
-    }
-    
-    .form-legend {
-        width: 15.625rem;
-    }
+        #page-heading  {
+            margin: 1rem auto;
+            font-size: 2.4rem;
+        }
+        
+        .form-legend {
+            width: 15.625rem;
+        }
 
-    .error-msg, #error-msg-date, #error-msg-status  {
-        width: 29.625rem;
-    }
+        .error-msg, #error-msg-date, #error-msg-status  {
+            width: 29.625rem;
+        }
 
-    .footer-list {
-        flex-direction: row;
-        flex-wrap: nowrap;
-        width: 100%;
+        .footer-list {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
     }
 }
 
