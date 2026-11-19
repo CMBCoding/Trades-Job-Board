@@ -29,7 +29,7 @@
 }
 
 #main {
-    background-color: var(--light-green);
+    background-color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5rem auto;
     padding: 0.5rem;
@@ -65,7 +65,7 @@
 .form-fieldset label {
     font-weight: 600;
     margin: 0.5rem auto 0.5rem 0;
-    color: var(--forestgreen);
+    color: black
 }
 
 .form-legend {
@@ -179,12 +179,10 @@ span.dtr-title {
 
 .error-msg {
     display: none;
-    text-shadow: 1.3px 1.3px 1px #474747, 4px 4px 1px rgba(255,255,255,0);
     color: red;
     font-weight: 600;
     font-style: italic;
     margin: 0.5rem auto 0.5rem 0;
-    background-color: var(--forestgreen);
     border: none;
     width: 19.063rem;
     border-radius: 0.375rem;
