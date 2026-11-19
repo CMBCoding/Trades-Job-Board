@@ -284,33 +284,6 @@ td:first-child, th:first-child {
      border-left: none;
 }
 
-/* #apply:hover {
-    background-color: lightgreen;
-    cursor: pointer;
-}
-
-#apply:focus {
-    background-color: #a0d4a0;
-}
-
-#apply:visited {
-    background-color: #27a127;
-}
-
-#apply:active {
-    background-color: #27a127;
-
-}
-
-#apply {
-    border: 0;
-    border-radius: 1rem;
-    background-color: var(--green);
-    color: white;
-    text-align: center;
-    padding: .5rem;
-} */
-
 /* Base button-link styles */
 .btn-link {
   /* Layout & Box Model */

@@ -10,12 +10,12 @@
             <thead>
                 <tr>
                     <th>Job Title</th>
-                    <th>Post Date</th>
-                    <th>Company Name</th>
                     <th>Trade Area</th>
+                    <th>Company Name</th>
                     <th>Location</th>
                     <th>Position Type</th>
                     <th>Position Status</th>
+                    <th>Post Date</th>
                     <th>Start Date</th>
                     <th>End Date</th>
                     <th data-orderable="false">Apply Now</th>    
@@ -25,15 +25,15 @@
                 <% postings.forEach(post => { %> 
                     <tr>
                         <td><%= post.JobTitle %></td>
-                        <td><%= post.PostDate.toLocaleString()%></td>
-                        <td><%= post.CompanyName %></td>
                         <td><%= post.TradeArea %></td>
+                        <td><%= post.CompanyName %></td>
                         <td><%= post.Location %></td>
                         <td><%= post.PositionType %></td>
                         <td><%= post.PositionStatus %></td>
+                        <td><%= post.PostDate.toLocaleString()%></td>
                         <td><%= post.StartDate.toLocaleString() %></td>
                         <td><%= post.EndDate.toLocaleString() %></td>
-                         <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
+                        <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                         
                     </tr>
 
