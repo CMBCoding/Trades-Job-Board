@@ -352,6 +352,13 @@ td:first-child, th:first-child {
         font-size: 2.5rem;
     }
 
+    #job-header > #nav-group {
+    #job-nav {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+
     #page-heading {
         margin: 0;
         font-size: 2.25rem;
@@ -397,6 +404,11 @@ td:first-child, th:first-child {
 
     #job-header > h1 {
         font-size: 4rem;
+    }
+
+    #job-header > #nav-group {
+    #job-nav {
+        flex-direction: row;
     }
 
     #page-heading  {
