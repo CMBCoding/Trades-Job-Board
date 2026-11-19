@@ -15,8 +15,6 @@
                     <th>Location</th>
                     <th>Position Type</th>
                     <th>Position Status</th>
-                    <th>Post Date</th>
-                    <th>Start Date</th>
                     <th>End Date</th>
                     <th data-orderable="false">Apply Now</th>    
                 </tr>
@@ -30,8 +28,6 @@
                         <td><%= post.Location %></td>
                         <td><%= post.PositionType %></td>
                         <td><%= post.PositionStatus %></td>
-                        <td><%= post.PostDate.toLocaleString()%></td>
-                        <td><%= post.StartDate.toLocaleString() %></td>
                         <td><%= post.EndDate.toLocaleString() %></td>
                         <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                         
@@ -46,13 +42,11 @@
             responsive: true,
             columns: [
                 {name: 'job_title'},
-                {name: 'post_date'},
                 {name: 'company_name'},
                 {name: 'trade_area'},
                 {name: 'job_location'},
                 {name: 'position_type'},
                 {name: 'position_status'},
-                {name: 'start_date'},
                 {name: 'end_date'},
                 {name: 'apply'}
             ],
