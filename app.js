@@ -34,11 +34,11 @@ app.set('view engine', 'ejs');
 const postings = [];
 
 app.get('/add-post', (req, res) => {
-    res.render('add-post');
+    res.render('add-post', {title: 'Add Jobs - Green River College'});
 });
 
 app.get('/confirm', (req, res) => {
-    res.render('confirm');
+    res.render('confirm', {title: 'Add Jobs - Confirmation - Green River College'});
 });
 
 
@@ -48,7 +48,7 @@ app.get('/', async(req, res) => {
     const [postings] = await pool.query(`SELECT * FROM postings WHERE EndDate >= CURRENT_DATE() ORDER BY PostDate DESC;`);
     console.log(postings);
     //Render the pulled postings onto the jobs board
-    res.render('jobs', {postings});
+    res.render('jobs', {postings, title: 'Trades Internships & Jobs Board - Green River College'});
   } catch (err) {
     console.error('Database error:', err);
     res.status(500).send(`Database error: ${err.message}`);
@@ -68,8 +68,8 @@ app.post('/confirm', async(req, res) => {
 
     const sql = `INSERT INTO postings (JobTitle, CompanyName, 
     TradeArea, Location, PositionType, 
-    PositionStatus, StartDate, EndDate, JobUrl)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`
+    PositionStatus, EndDate, JobUrl)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?);`
 
     const params = [  
       post.jobTitle,
@@ -78,7 +78,6 @@ app.post('/confirm', async(req, res) => {
       post.jobLocation, 
       post.positionType,
       post.positionStatus,
-      post.jobStartDate,
       post.jobEndDate,
       post.jobUrl
     ]
@@ -89,7 +88,7 @@ app.post('/confirm', async(req, res) => {
     post.id = result.insertId;
     console.log(`Post added with the ID of ${post.id}`);
 
-    res.render('confirm', {post});
+    res.render('confirm', {post, title: 'Add Jobs - Confirmation - Green River College'});
 
   } catch (err) {
     console.error('Error is saving the posting:', err);

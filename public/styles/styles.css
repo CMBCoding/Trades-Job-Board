@@ -38,7 +38,7 @@
     border: solid 2px var(--light-green);
     border-radius: 0.75rem;
     box-shadow: var(--forestgreen) 4px 4px;
-    color: #ffffff;
+    color: #000000;
 }
 
 #job-post-form, .box {
