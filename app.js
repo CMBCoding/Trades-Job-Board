@@ -5,6 +5,8 @@ import mysql2 from 'mysql2'
 //Import the dotenv module
 import dotenev from 'dotenv'
 
+import session from 'express-session'
+
 //Load in the the .env file
 dotenev.config();
 
@@ -29,18 +31,67 @@ app.use(express.static('public'));
 //Middleware via express to parse form data and store them in the req.body
 app.use(express.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
+//session middleware (remembers users)
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false,
+    cookie: { maxAge: 1000 * 60 * 60}
+}));
+
+// function middleware that checks if user is logged in
+function requireLogin(req, res, next) {
+    if (req.session.loggedIn) {
+        next();
+    } else {
+        res.redirect('/login');
+    }
+}
 
 //Array to hold and parse the data from the form
 const postings = [];
 
-app.get('/add-post', (req, res) => {
+// TEMPORARY: session test route (remove in Part 4)
+// app.get('/session-test', (req, res) => {
+//     req.session.views = (req.session.views || 0) + 1;
+//     res.send(`Visits: ${req.session.views}<br>
+//         Logged in: ${req.session.loggedIn === true}`);
+// });
+
+app.get('/login', (req, res) => {
+  res.render('login', {error: null})
+});
+
+app.post('/login', (req, res) => {
+    //Process login info
+    const username = req.body.username;
+    const password = req.body.password;
+
+    //compare with .env values
+    if(username === process.env.ADMIN_USER &&
+        password === process.env.ADMIN_PASSWORD) {
+            req.session.loggedIn = true;
+            res.redirect('/add-post');
+        } else {
+            res.render('login', 
+                {error: 'Invalid username or password'});
+        }
+});
+
+//destroys session
+app.get('/logout', (req, res) => {
+    req.session.destroy(() => {
+        res.redirect('/login');
+    });
+});
+
+app.get('/add-post', requireLogin, (req, res) => {
     res.render('add-post', {title: 'Add Jobs - Green River College'});
 });
 
 app.get('/confirm', (req, res) => {
     res.render('confirm', {title: 'Add Jobs - Confirmation - Green River College'});
 });
-
 
 app.get('/', async(req, res) => {
   try {

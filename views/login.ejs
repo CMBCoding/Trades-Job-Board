@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('partials/head.ejs') %>
+<body>
+    <%-include('partials/header.ejs') %>
+    <main id="main">
+        <h1>Admin Login</h1>
+
+        <!-- Only show the error message if there is an error -->
+        <% if(error) {%>
+            <p class="login-error"><%= error %></p>
+            <% } %>
+        <form action="/login" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Log In</button>
+            </form>
+    </main>
+</body>
+</html>
