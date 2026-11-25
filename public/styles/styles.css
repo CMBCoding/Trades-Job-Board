@@ -377,21 +377,21 @@ td:first-child, th:first-child {
             width: 19.063rem;
         }
 
+        }
         .footer-container {
             color: #ffffff;
             width: 100%;
             padding: 1rem;
             background-color: var(--forestgreen);
-            display: flex;
-            flex-direction: column;
+            display:flex;
             justify-content: center;
-            align-items: center;
         }
 
         .footer-list {
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: flex-end;
     }
 }
 
@@ -421,13 +421,12 @@ td:first-child, th:first-child {
         .error-msg, #error-msg-date, #error-msg-status  {
             width: 29.625rem;
         }
-
-        .footer-list {
+    }
+    .footer-list {
             flex-direction: row;
             flex-wrap: nowrap;
             width: 100%;
         }
-    }
 }
 
 @media screen and (min-width: 1000px) {
