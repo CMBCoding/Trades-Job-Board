@@ -9,6 +9,8 @@
         <table id="job-table" class="display">
             <thead>
                 <tr>
+                    <!-- Apply now is no longer sortable by clicking the table header of it. -->
+                    <th data-orderable="false">Apply Now</th>    
                     <th>Job Title</th>
                     <th>Trade Area</th>
                     <th>Company Name</th>
@@ -16,13 +18,12 @@
                     <th>Position Type</th>
                     <th>Position Status</th>
                     <th>Apply By</th>
-                    <!-- Apply now is no longer sortable by clicking the table header of it. -->
-                    <th data-orderable="false">Apply Now</th>    
                 </tr>
             </thead>
             <tbody>
                 <% postings.forEach(post => { %> 
                     <tr>
+                        <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                         <td><%= post.JobTitle %></td>
                         <td><%= post.TradeArea %></td>
                         <td><%= post.CompanyName %></td>
@@ -30,9 +31,7 @@
                         <td><%= post.PositionType %></td>
                         <td><%= post.PositionStatus %></td>
                         <td><%= post.EndDate.toLocaleDateString() %></td>
-                        <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
                     </tr>
-
                 <% }); %>
             </tbody>
         </table>
@@ -42,18 +41,18 @@
         new DataTable('#job-table', {
             responsive: true,
             columns: [
+                {name: 'apply'},
                 {name: 'job_title'},
                 {name: 'trade_area'},
                 {name: 'company_name'},
                 {name: 'job_location'},
                 {name: 'position_type'},
                 {name: 'position_status'},
-                {name: 'end_date'},
-                {name: 'apply'}
+                {name: 'end_date'}
             ],
             order: {
                 name: 'post_date',
-                dir: 'desc'
+                dir: 'asc'
             },
 
             columnDefs: [

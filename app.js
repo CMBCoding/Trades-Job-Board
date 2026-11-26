@@ -99,7 +99,7 @@ app.get('/confirm', (req, res) => {
 app.get('/', async(req, res) => {
   try {
     //Pull the postings from the database. Do not pull ones that have a EndDate less than or equal to today's date.
-    const [postings] = await pool.query(`SELECT * FROM postings WHERE EndDate >= CURRENT_DATE() ORDER BY PostDate DESC;`);
+    const [postings] = await pool.query(`SELECT * FROM postings WHERE EndDate >= CURRENT_DATE() ORDER BY PostDate ASC;`);
     console.log(postings);
     //Render the pulled postings onto the jobs board. Also send title for the page.
     res.render('jobs', {postings, title: 'Trades Internships & Jobs Board - Green River College'});
