@@ -81,7 +81,7 @@ app.post('/login', (req, res) => {
 //destroys session.
 app.get('/logout', (req, res) => {
     req.session.destroy(() => {
-        res.redirect('/login');
+        res.redirect('/jobs');
     });
 });
 
@@ -96,7 +96,7 @@ app.get('/confirm', (req, res) => {
 });
 
 // Creates a route to home page and send it sorted data from the database.
-app.get('/', async(req, res) => {
+app.get('/jobs', async(req, res) => {
   try {
     //Pull the postings from the database. Do not pull ones that have a EndDate less than or equal to today's date.
     const [postings] = await pool.query(`SELECT * FROM postings WHERE EndDate >= CURRENT_DATE() ORDER BY PostDate ASC;`);
