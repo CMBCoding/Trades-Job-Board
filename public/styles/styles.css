@@ -222,6 +222,22 @@ span.dtr-title {
     text-shadow: 3px 3px 0 var(--green), 6px 6px 0 var(--forestgreen);
 }
 
+#jobs-intro {
+    border-left: 2px solid var(--forestgreen);
+    border-top: 2px solid var(--forestgreen);;
+    margin: 2rem 0;
+    border-radius: 0.75rem;
+    box-shadow: var(--forestgreen) 3px 3px;
+    padding: 1rem;
+}
+
+#jobs-intro > p {
+    font-weight: 600;
+    font-size: 1.15rem;
+    text-align: center;
+}
+
+
 #job-header > #nav-group {
     background-color: var(--forestgreen);
     padding: 1rem 0.5rem;

@@ -2,7 +2,7 @@
 document.getElementById("job-post-form").onsubmit = () => {
 
     //Set a validation flag
-    isValid = true;
+    isValid;
 
     //Call to the clear function.
     clearErrors();
