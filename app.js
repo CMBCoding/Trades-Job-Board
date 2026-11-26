@@ -132,7 +132,7 @@ app.post('/confirm', async(req, res) => {
       post.tradeArea, 
       post.jobLocation, 
       post.positionType,
-      post.positionStatus,
+      post.positionStatus ?? NULL,
       post.jobEndDate,
       post.jobUrl
     ]
