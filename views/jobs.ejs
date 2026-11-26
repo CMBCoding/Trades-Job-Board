@@ -55,17 +55,37 @@
                 dir: 'asc'
             },
 
-            columnDefs: [
-		        {
-			        searchBuilder: {
-				        defaultCondition: '=',
-                        defaultData: 'trade_area'
-			        },
-			    targets: [1]
-		        },
+            // columnDefs: [
+		    //     {
+			//         searchBuilder: {
+			// 	        defaultCondition: '=',
+            //             defaultData: 'trade_area'
+			//         },
+			//     targets: [1]
+		    //     },
+            // ],
+
+
+            // Filter buttons in progress, don work.
+            buttons: [
+                {
+					extend: 'collection',
+					text: 'Filter',
+					buttons: [ 
+                        {
+                            text: 'Carpentry',
+                            action: function() {
+                               DataTable.column(2).search('Carpentry').draw(); 
+                            }
+                        },
+                        
+
+                    ]
+				},
+
             ],
             layout: {
-                topStart: 'searchBuilder'
+                topStart: 'buttons',
             }
         });
     </script>
