@@ -5,6 +5,7 @@
 <%-include('partials/header.ejs') %>
 
     <main id="main-content">
+        <!-- Data Table containing job/intern information. -->
         <table id="job-table" class="display">
             <thead>
                 <tr>
@@ -15,6 +16,7 @@
                     <th>Position Type</th>
                     <th>Position Status</th>
                     <th>Apply By</th>
+                    <!-- Apply now is no longer sortable by clicking the table header of it. -->
                     <th data-orderable="false">Apply Now</th>    
                 </tr>
             </thead>
@@ -29,13 +31,13 @@
                         <td><%= post.PositionStatus %></td>
                         <td><%= post.EndDate.toLocaleDateString() %></td>
                         <td><a href="<%= post.JobUrl %>" target="_blank" class="btn-link">Apply</a></td>
-                        
                     </tr>
 
                 <% }); %>
             </tbody>
         </table>
     </main>
+    <!-- Script to create a new instance of a Data table. -->
     <script>
         new DataTable('#job-table', {
             responsive: true,
