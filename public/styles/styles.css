@@ -204,6 +204,18 @@ span.dtr-title {
     flex-direction: column;
     min-height: 100vh;
 }
+.dropdownbtn {
+    border: none;
+    border-radius: 1rem;
+    padding: .25rem;
+    margin: .25rem;
+}
+
+.filterbtn {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
 
 #job-header {
     background-image: url(https://wallpaperaccess.com/full/429865.jpg);
