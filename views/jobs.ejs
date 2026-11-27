@@ -41,59 +41,7 @@
             </tbody>
         </table>
     </main>
-    <!-- Script to create a new instance of a Data table. -->
-    <script>
-        const jobTable = new DataTable('#job-table', {
-            responsive: true,
-            columns: [
-                {name: 'apply'},
-                {name: 'job_title'},
-                {name: 'trade_area'},
-                {name: 'company_name'},
-                {name: 'job_location'},
-                {name: 'position_type'},
-                {name: 'position_status'},
-                {name: 'end_date'}
-            ],
-            order: {
-                name: 'post_date',
-                dir: 'asc'
-            },
-
-            // Filter buttons in progress, don work.
-            buttons: [
-                {
-					extend: 'collection',
-					text: 'Filter',
-					buttons: [ 
-                        {
-                            text: 'Carpentry',
-                            action: function() {
-                               jobTable.column(2).search('Carpentry').draw(); 
-                            }
-                        },
-                        {
-                            text: 'Welding',
-                            action: function() {
-                               jobTable.column(2).search('Welding').draw(); 
-                            }
-                        },
-                        {
-                            text: 'Manufacturing',
-                            action: function() {
-                               jobTable.column(2).search('Manufacturing').draw(); 
-                            }
-                        }
-                        
-
-                    ]
-				},               
-            ],
-            layout: {
-                top: 'buttons',
-            }
-        });
-    </script>
-</body>
 <%-include('partials/footer.ejs') %>
+</body>
+
 </html>
