@@ -2,7 +2,7 @@
 document.getElementById("job-post-form").onsubmit = () => {
 
     //Set a validation flag
-    isValid;
+    let isValid = true;
 
     //Call to the clear function.
     clearErrors();
@@ -24,9 +24,9 @@ document.getElementById("job-post-form").onsubmit = () => {
     let companyName = document.getElementById("companyName").value.trim();
     let trade = document.getElementById("tradeArea").value;
     let jobLocation = document.getElementById("jobLocation").value.trim();
-    let jobDateStart = document.getElementById("jobStartDate").value;
-    let jobDateEnd = document.getElementById("jobEndDate").value;
     let jobLink = document.getElementById("jobUrl").value.trim();
+    //Grab the Job/Internship radio button inputs.
+    let typeButtons = document.getElementsByName("positionType");
 
     //Validate the job-title field
     if (jobTitle === "") {
@@ -54,8 +54,6 @@ document.getElementById("job-post-form").onsubmit = () => {
 
     //Validate the full Job/Internship radio button inputs.
     let positionTypeSelected = false; //No status is selected if neither button is checked.
-    //Grab the Job/Internship radio button inputs.
-    let typeButtons = document.getElementsByName("positionType");
     //Check the status of each status button, if one is checked, validate
     for (let i = 0; i < typeButtons.length; i++) {
         if (typeButtons[i].checked) {
@@ -63,27 +61,10 @@ document.getElementById("job-post-form").onsubmit = () => {
         }
     }
 
-    //If niether job status button is checked, invalidate the validation
+    //If neither job status button is checked, invalidate the validation
     if (!positionTypeSelected) {
         isValid = false; //Invalidate the input
         document.getElementById("error-msg-type").style.display = "block";
-    }
-
-    //Validate the full time/partime radio button inputs.
-    let positionStatusSelected = false; //No status is selected if neither button is checked.
-    //Grab the full time/partime radio button inputs.
-    let statusButtons = document.getElementsByName("positionStatus");
-    //Check the status of each status button, if one is checked, validate
-    for (let i = 0; i < statusButtons.length; i++) {
-        if (statusButtons[i].checked) {
-            positionStatusSelected = true;
-        }
-    }
-
-    //If niether job status button is checked, invalidate the validation
-    if (!positionStatusSelected) {
-        isValid = false; //Invalidate the input
-        document.getElementById("error-msg-status").style.display = "block";
     }
 
     //Validate the job link URL 
